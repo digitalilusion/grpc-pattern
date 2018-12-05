@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package api;
+
+service API {
+  rpc parse (ParseRequest) returns (ParseResponse);
+}
+
+enum Language {
+  NONE = 0;
+  EN = 1;
+  ES = 2;
+  DE = 3;
+  FR = 4;
+  IT = 5;
+  NL = 6;
+
+}
+
+message ParseRequest {
+  Language language = 1;
+  string text = 2;
+}
+
+message ParseResponse {
+  bool isOk = 1;
+  string reason = 2;
+  repeated Sentence sentences = 3;
+}
+
+message Sentence {
+  repeated Word words = 1;
+  repeated Chunk chunks = 2;
+
+}
+
+message Word {
+  string text = 1;
+  string type = 2;
+}
+
+message Chunk {
+  string type = 1;
+  repeated Word words = 2;
+}
