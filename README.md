@@ -6,7 +6,7 @@
 
 grpc-pattern brings Pattern as microservice through Docker container.
 
-![grpc-pattern demo](grpc-pattern/img/grpc-pattern-demo.gif)
+![grpc-pattern demo](img/grpc-pattern-demo.gif)
 # Run it
 
 To use it, just execute:
