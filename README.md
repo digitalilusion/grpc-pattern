@@ -25,5 +25,99 @@ A REPL interface with node is launched. Let's try the parser. `language = 1` for
 ```
 client.parse({'language': 1, 'text': 'The cat is over the roof. And the dog?'}, pr)
 ```
+__NOTE__: The specific language module is lazy-loaded. You need wait about 3-5 seconds for first response.
 
 And this is the result:
+```
+{
+  "isOk": true,
+  "reason": "",
+  "sentences": [
+    {
+      "words": [
+        {
+          "text": "the",
+          "type": "DT"
+        },
+        {
+          "text": "roof",
+          "type": "NN"
+        }
+      ],
+      "chunks": [
+        {
+          "type": "NP",
+          "words": [
+            {
+              "text": "The",
+              "type": "DT"
+            },
+            {
+              "text": "cat",
+              "type": "NN"
+            }
+          ]
+        },
+        {
+          "type": "VP",
+          "words": [
+            {
+              "text": "is",
+              "type": "VBZ"
+            }
+          ]
+        },
+        {
+          "type": "PP",
+          "words": [
+            {
+              "text": "over",
+              "type": "IN"
+            }
+          ]
+        },
+        {
+          "type": "NP",
+          "words": [
+            {
+              "text": "the",
+              "type": "DT"
+            },
+            {
+              "text": "roof",
+              "type": "NN"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "the",
+          "type": "DT"
+        },
+        {
+          "text": "dog",
+          "type": "NN"
+        }
+      ],
+      "chunks": [
+        {
+          "type": "NP",
+          "words": [
+            {
+              "text": "the",
+              "type": "DT"
+            },
+            {
+              "text": "dog",
+              "type": "NN"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
