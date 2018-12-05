@@ -1,8 +1,8 @@
 # grpc-pattern as microservice
 
-Pattern is a great framework for Natural Language Processing for Python.
+[Pattern](https://github.com/clips/pattern) is a great framework for Natural Language Processing for Python.
 
-gRPC is the new efficient and effective transfer protocol powered by Google to create microservice.
+[gRPC](https://grpc.io/) is the new efficient and effective transfer protocol powered by Google to create microservice.
 
 grpc-pattern brings Pattern as microservice through Docker container.
 
